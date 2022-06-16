@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: container-test-aspnet-pod
+spec:
+  containers:
+  - name: container-test-aspnet
+    image: container-test-aspnet:v2
+    ports:
+    - containerPort: 80
