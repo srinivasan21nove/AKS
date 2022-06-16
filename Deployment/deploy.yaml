@@ -19,3 +19,26 @@ spec:
         image: srinivasan21nove/dotnet-containerid-test:v1
         ports:
         - containerPort: 80
+
+--------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-deployment
+  labels:
+    app: aspnet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnet
+  template:
+    metadata:
+      labels:
+        app: aspnet
+    spec:
+      containers:
+      - name: aspnet
+        image: srinivasan21nove/dotnet-containerid-test:v1
+        ports:
+        - containerPort: 80
