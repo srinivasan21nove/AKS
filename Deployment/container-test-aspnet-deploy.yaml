@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: container-test-aspnet
-        image: container_test_aspnet:v2
+        image: srinivasan21nove/container_test_aspnet:v2
         ports:
         - containerPort: 80
