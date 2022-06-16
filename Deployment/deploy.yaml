@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebdeploy
+  labels:
+    app: aspnet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aspnet
+  template:
+    metadata:
+      labels:
+        app: aspnet
+    spec:
+      containers:
+      - name: mywebapp
+        image: srinivasan21nove/dotnet-containerid-test:v1
+        ports:
+        - containerPort: 80
